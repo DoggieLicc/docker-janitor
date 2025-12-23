@@ -1,8 +1,6 @@
-version: '3.5'
-
 services:
   janitor:
-    image: flaviostutz/docker-janitor
+    image: doggielicc/docker-janitor
     build: .
     deploy:
       mode: global
@@ -17,4 +15,3 @@ services:
       - EXCLUDE_RESOURCES=
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-

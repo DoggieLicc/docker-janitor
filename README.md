@@ -1,7 +1,7 @@
 # docker-janitor
 
-[<img src="https://img.shields.io/docker/pulls/flaviostutz/docker-janitor"/>](https://hub.docker.com/r/flaviostutz/docker-janitor)
-[<img src="https://img.shields.io/docker/automated/flaviostutz/docker-janitor"/>](https://hub.docker.com/r/flaviostutz/docker-janitor)
+[<img src="https://img.shields.io/docker/pulls/doggielicc/docker-janitor"/>](https://hub.docker.com/r/doggielicc/docker-janitor)
+[<img src="https://img.shields.io/docker/automated/doggielicc/docker-janitor"/>](https://hub.docker.com/r/doggielicc/docker-janitor)
 
 This containers performs continuous cleanups on unused Docker resources on the host.
 
@@ -9,7 +9,7 @@ Basically it performs ```docker system prune --all``` from time to time.
 
 ## Usage
 * To run it on a standalone host
-  * ```docker run -v /var/run/docker.sock:/var/run/docker.sock flaviostutz/docker-janitor```
+  * ```docker run -v /var/run/docker.sock:/var/run/docker.sock doggielicc/docker-janitor```
 * To run on all hosts of a Swarm Cluster
   * docker-compose.yml
 
@@ -18,7 +18,7 @@ version: '3.5'
 
 services:
   janitor:
-    image: flaviostutz/docker-janitor
+    image: doggielicc/docker-janitor
     build: .
     deploy:
       mode: global
