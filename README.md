@@ -14,8 +14,6 @@ Basically it performs ```docker system prune --all``` from time to time.
   * docker-compose.yml
 
 ```
-version: '3.5'
-
 services:
   janitor:
     image: doggielicc/docker-janitor
